@@ -1,0 +1,12 @@
+NVCC = /usr/local/cuda/bin/nvcc
+NVCC_FLAGS = -g -G -Xcompiler -Wall
+
+all: lab7.exe
+lab7.exe: lab7_init.o lab7.o
+        $(NVCC) $^ -o $@
+
+lab7_init.o: lab7_init.cpp lab7.h
+        $(NVCC) $(NVCC_FLAGS) -c $< -o $@
+
+lab7.o: lab7.cu lab7.h
+        $(NVCC) $(NVCC_FLAGS) -c $< -o $@
