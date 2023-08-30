@@ -7,3 +7,4 @@
 *.exp
 *.exe
 *.lib
+*.pdb
