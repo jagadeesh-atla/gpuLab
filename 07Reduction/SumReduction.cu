@@ -51,8 +51,12 @@ int main() {
 	CHECK(cudaMalloc((void **)&dev_a, N * sizeof(float)));
 	CHECK(cudaMalloc((void **)&dev_d, N * sizeof(float)));
 	
-	for (int i = 0; i < N; ++i)
-		a[i] = ((float)rand())/(RAND_MAX);
+	for (int i = 0; i < N; ++i) {	
+		float x  = ((float)rand())/(float)(RAND_MAX);
+		a[i] = x;
+		if (N < 25) printf("%f ", x);
+	}
+	printf("\n");	
 
 	CHECK(cudaEventRecord(start, 0));
 	cudaMemcpy(dev_a, a, N * sizeof(float), cudaMemcpyHostToDevice);
