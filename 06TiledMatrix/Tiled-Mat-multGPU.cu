@@ -26,8 +26,8 @@ __global__ void MatrixMulKernel(float* MatA, float *MatB, float *MatC, int Width
 		__syncthreads();
 	
 		for (int k = 0; k < TILE_WIDTH; ++k) 
-			Pvalue += Mds[ty][k] * Nds[k][tx];
-			__syncthreads();
+		{Pvalue += Mds[ty][k] * Nds[k][tx];
+			__syncthreads();}
 		
 	}
 	MatC[(Row*Width) + Col] = Pvalue;
