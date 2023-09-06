@@ -13,8 +13,9 @@ int main() {
   printf("Hello World from CPU!\n");
 
   // call kernal with 5 threads
-  helloFromGPU<<<1, 5>>>();
+  helloFromGPU<<<1, 10>>>();
   cudaDeviceReset();
 
   return 0;
 }
+
