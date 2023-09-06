@@ -1,3 +1,4 @@
+/* 21JE0192 - A JAGADEESH */
 #include "lab7.h"
 #include "cuda_runtime.h"
 #include "stdio.h"

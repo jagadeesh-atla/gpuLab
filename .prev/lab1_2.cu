@@ -1,3 +1,4 @@
+/* 21JE0192 - A JAGADEESH */
 #include <stdio.h>
 __global__ void printGPU(){
         printf("GPU Computing Lab\nExperiment 2.1\nDate: 10-08-2022\n");

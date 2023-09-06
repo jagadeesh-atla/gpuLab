@@ -1,3 +1,4 @@
+/* 21JE0192 - A JAGADEESH */
 /**
  * distance b/w two vectors x = i^2, y = (2i + 1) and n = 1024. Also find
  * euclidean norms
