@@ -10,3 +10,4 @@
 *.pdb
 *.out
 .vscode/
+.venv/
