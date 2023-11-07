@@ -22,7 +22,7 @@ def print_device_info():
             print(
                 '\tDevice - constant Memory: {0:.0f} KB'.format(device.max_constant_buffer_size / 1024.0))
             print(
-                '\tDevice - global Memory: {0:.0f} GB'.format(device.global_mem_size / 1024.0))
+                '\tDevice - global Memory: {0:.0f} GB'.format(device.global_mem_size / (1024.0 * 1024.0 * 1024.0)))
             print('\tDevice - Max Buffer/Image Size: {0:.0f} MB'.format(
                 device.max_mem_alloc_size / 1073741824.0))
             print(
